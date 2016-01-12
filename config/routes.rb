@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :chores
   resources :bugs
   resources :features
   resources :tickets
