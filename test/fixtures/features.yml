@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estimation: 9.99
+  epic_id: 
+
+two:
+  estimation: 9.99
+  epic_id: 
