@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :epics
   resources :projects
   resources :teams
   resources :users
