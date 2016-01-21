@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112143022) do
+ActiveRecord::Schema.define(version: 20160121163820) do
 
   create_table "bugs", force: :cascade do |t|
     t.integer  "project_id"
@@ -92,11 +92,14 @@ ActiveRecord::Schema.define(version: 20160112143022) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "state_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "ticketable_id"
+    t.string   "ticketable_type"
   end
 
   add_index "tickets", ["state_id"], name: "index_tickets_on_state_id"
+  add_index "tickets", ["ticketable_id"], name: "index_tickets_on_ticketable_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
