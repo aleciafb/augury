@@ -3,4 +3,5 @@ class Feature < ActiveRecord::Base
   has_many :tasks
 
   has_one :ticket, as: :ticketable
+  accepts_nested_attributes_for :ticket
 end
